@@ -1,6 +1,5 @@
-import { GeoProjection, geoEqualEarth, geoPath } from 'd3-geo';
+import { GeoProjection, geoEqualEarth } from 'd3-geo';
 import { scaleLinear } from 'd3-scale';
-import { Feature } from 'geojson';
 import { ReactElement, useCallback, useEffect, useState } from 'react';
 import {
   ComposableMap,
@@ -10,7 +9,6 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps';
 import ReactTooltip from 'react-tooltip';
-import { feature } from 'topojson-client';
 
 import { TFetchMapChartCountries } from 'api';
 
@@ -40,11 +38,6 @@ const projection: GeoProjection = geoEqualEarth()
   .scale(defaultScale * 100)
   .center(defaultCenter);
 
-const path = geoPath(projection);
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const geos = feature(geography, geography.objects['ne_10m_admin_0_countries']).features;
 
 const getMinMax = (arr: number[]): Point => {
   return [Math.min.apply(null, arr), Math.max.apply(null, arr)];

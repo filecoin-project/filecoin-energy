@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { Interval, format, isValid } from 'date-fns';
+import { format, isValid } from 'date-fns';
 import { nanoid } from 'nanoid';
 import { CSSProperties, ReactElement, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
