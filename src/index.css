@@ -1,0 +1,190 @@
+/* https://www.color-blindness.com/color-name-hue/ */
+:root {
+  --color-white: #fff;
+  --color-black-pearl: #040505;
+  --color-solitude: #f2f4f6;
+  --rgb-solitude: 242, 244, 246;
+  --color-solitude-dark: #e0e5ea;
+  --rgb-solitude-dark: 224, 226, 234;
+  --color-lochinvar: #4ea394;
+  --rgb-lochinvar: 78, 163, 148;
+  --color-kashmir-blue: #576c7e;
+  --rgb-kashmir-blue: 87, 108, 126;
+  --color-oxford-blue: #2d3842;
+  --color-link-water: #bcc7d1;
+  --color-nepal: #98a9b8;
+  --color-sunshade: #ff974d;
+  --rgb-sunshade: 255, 151, 77;
+
+  --color-error: #dc2626;
+
+  --theme-color-primary: var(--color-lochinvar);
+  --theme-color-primary-rgb: var(--rgb-lochinvar);
+  --theme-color-secondary: var(--color-sunshade);
+  --theme-color-secondary-rgb: var(--rgb-sunshade);
+
+  --theme-background-primary: var(--color-solitude);
+  --theme-background-secondary: var(--color-white);
+
+  --theme-text-primary: var(--color-black-pearl);
+  --theme-text-secondary: var(--color-kashmir-blue);
+  --theme-text-secondary-rgb: var(--rgb-kashmir-blue);
+  --theme-text-inactive: var(--color-link-water);
+  --theme-text-primary-inverted: var(--color-white);
+
+  --theme-input-bg: var(--color-white);
+  --theme-input-placeholder-color: var(--color-nepal);
+  --theme-input-border: 1px solid var(--color-white);
+  --theme-input-border-active: 1px solid var(--theme-color-primary);
+
+  --theme-icon-color: var(--color-nepal);
+
+  --theme-table-th-color: var(--color-nepal);
+  --theme-table-td-color: var(--color-black-pearl);
+  --theme-table-row-bg: rgba(var(--rgb-solitude), 0.64);
+
+  --theme-border-color: var(--color-solitude-dark);
+
+  --theme-tooltip-bg: var(--color-oxford-blue);
+  --theme-tooltip-color-primary: var(--color-white);
+  --theme-tooltip-color-secondary: var(--color-nepal);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme-color-primary);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--theme-text-primary);
+  background-color: var(--theme-background-primary);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 1118px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.container {
+  padding: 0 24px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1118px;
+  position: relative;
+}
+
+.h2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--theme-text-primary);
+  margin: 0;
+}
+
+.button-primary {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--theme-text-primary-inverted);
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--theme-color-primary);
+  box-shadow: 0 8px 16px rgba(var(--theme-color-primary-rgb), 0.24);
+  transition: all 0.05s ease-out;
+  white-space: nowrap;
+}
+
+.markdown h2 {
+  margin: 40px 0 16px;
+}
+
+.markdown table {
+  margin: 16px 0 32px;
+  border-collapse: collapse;
+  border-radius: 6px;
+  border: 0 hidden;
+  box-shadow: 0 0 0 1px var(--theme-border-color);
+}
+
+.markdown table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--theme-table-th-color);
+  padding: 4px 12px;
+  border: 1px solid var(--theme-border-color);
+}
+
+.markdown table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.markdown table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.markdown table td {
+  text-align: left;
+  font-weight: 500;
+  color: var(--theme-table-td-color);
+  padding: 4px 12px;
+  border: 1px solid var(--theme-border-color);
+}
+
+.markdown table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.markdown table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.rsm-svg {
+  /*height: 100%;*/
+}
+
+.rsm-geography {
+  transition: fill 0.2s ease-out;
+  outline: none;
+}
+
+.rsm-marker {
+  outline: none;
+}

@@ -1,0 +1,184 @@
+.wrap {
+  position: relative;
+  min-width: 360px;
+}
+
+.iconCalendar,
+.iconArrow {
+  color: var(--theme-icon-color);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.iconCalendar {
+  left: 24px;
+}
+
+.iconArrow {
+  right: 24px;
+  transform-origin: center;
+}
+
+.iconArrow.rotate {
+  transform: translateY(-50%) rotate(180deg);
+  color: var(--theme-text-primary);
+}
+
+.button {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 24px 65px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--theme-text-primary);
+  border: var(--theme-input-border);
+  background: var(--theme-input-bg);
+  border-radius: 8px;
+  outline: none;
+}
+
+.button::placeholder {
+  color: var(--theme-input-placeholder-color);
+}
+
+.button:hover,
+.button.active,
+.button:active,
+.button:focus {
+  border: var(--theme-input-border-active);
+}
+
+.dateSeparator {
+  color: var(--theme-icon-color);
+  margin: 0 8px;
+}
+
+.datePickerWrap {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--theme-background-secondary);
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 32px 64px rgba(4, 5, 5, 0.08);
+}
+
+.datePickerWrap.active {
+  display: block;
+}
+
+.calendarsWrap {
+  display: flex;
+}
+
+.footer {
+  background: rgba(var(--rgb-solitude-dark), 0.32);
+  padding: 16px 24px;
+  display: flex;
+}
+
+.selectedDate {
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.selectedDate:last-child {
+  margin-right: 0;
+}
+
+.selectedDateTitle {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--theme-text-secondary);
+  margin-bottom: 4px;
+}
+
+.selectedDateValue {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--theme-text-primary);
+}
+
+.buttonsWarp {
+  margin-left: auto;
+}
+
+.clearButton,
+.applyButton {
+  border-radius: 8px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  background: transparent;
+  margin-left: 24px;
+}
+
+.clearButton {
+  border: 1px solid var(--theme-border-color);
+  color: var(--theme-text-secondary);
+}
+
+.applyButton {
+  color: var(--theme-text-primary-inverted);
+  background: var(--theme-color-primary);
+  border-color: var(--theme-color-primary);
+}
+
+.applyButton:disabled {
+  background: var(--theme-input-placeholder-color);
+  border-color: var(--theme-input-placeholder-color);
+}
+
+.rangeWrap {
+  padding: 8px;
+  border-left: 1px solid var(--theme-background-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.rangeButton {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--theme-input-placeholder-color);
+  margin: 0;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+}
+
+.rangeButton.custom {
+  margin-top: auto;
+}
+
+.rangeButton.active {
+  color: var(--theme-text-primary);
+}
+
+.rangeButton:hover {
+  background: rgba(var(--rgb-solitude-dark), 0.32);
+  color: var(--theme-text-primary);
+}

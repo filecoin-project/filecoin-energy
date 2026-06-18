@@ -1,0 +1,181 @@
+.modal {
+  max-width: 894px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--theme-text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--theme-text-secondary);
+  margin: 8px 0 0;
+}
+
+.selectAllBtn {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--theme-color-primary);
+  font: inherit;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+.selectAllBtn:hover {
+  opacity: 0.8;
+}
+
+.grid {
+  margin: 32px 0;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.itemWrap {
+  position: relative;
+}
+
+.itemInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.itemInner {
+  background: var(--theme-background-secondary);
+  border: 1px solid var(--theme-border-color);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  padding: 16px;
+}
+
+.itemLabel {
+  align-self: center;
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-background-secondary);
+  border: 1px solid var(--theme-border-color);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.itemTitles {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--theme-text-primary);
+  cursor: pointer;
+}
+
+.itemSubtitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--theme-text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.itemTitle + .itemSubtitle {
+  margin-top: 4px;
+}
+
+.itemSubtitleSeparator {
+  background: var(--color-nepal);
+  border-radius: 100px;
+  width: 4px;
+  height: 4px;
+  margin: 0 8px;
+}
+
+.itemDetailsButton {
+  font: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--theme-color-primary);
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.itemInput:checked ~ .itemInner {
+  border-color: var(--theme-color-primary);
+  background: rgba(var(--theme-color-primary-rgb), 0.08);
+}
+
+.itemInput:checked ~ .itemInner .itemLabel {
+  border-color: var(--theme-color-primary);
+}
+
+.itemInput:checked ~ .itemInner .itemLabel::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: var(--theme-color-primary);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backButton {
+  font: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--theme-icon-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.backButton span {
+  color: var(--theme-text-secondary);
+  margin-left: 8px;
+}
+
+.backButton:hover {
+  color: var(--theme-text-secondary);
+}
+
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--theme-text-primary);
+  margin-top: 32px;
+}
