@@ -2,6 +2,7 @@
   "name": "filecoin-green-webapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://filecoin-project.github.io/filecoin-energy",
   "dependencies": {
     "bignumber.js": "9.3.1",
     "classnames": "2.5.1",
