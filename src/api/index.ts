@@ -11,7 +11,7 @@ export type TChartModel = {
 export const fetchChartModels = async (_opts?: {
   abortController: AbortController;
 }): Promise<TChartModel[]> => {
-  const response = await fetch('/data/models-list.json');
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/models-list.json`);
   return response.json();
 };
 
@@ -52,7 +52,7 @@ export const fetchChart = async ({
 }): Promise<TFetchChartResponse> => {
   const filter = data.filter || 'day';
   const interval = data.interval || '6m';
-  const response = await fetch(`/data/model-${data.id}-${filter}-${interval}.json`);
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/model-${data.id}-${filter}-${interval}.json`);
   return response.json();
 };
 
@@ -67,7 +67,7 @@ export type TFetchMapChartCountries = {
 export const fetchMapChartCountries = async (_opts?: {
   abortController: AbortController;
 }): Promise<TFetchMapChartCountries[]> => {
-  const response = await fetch('/data/map-list.json');
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/map-list.json`);
   return response.json();
 };
 
