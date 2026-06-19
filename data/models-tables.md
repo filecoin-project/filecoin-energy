@@ -1,5 +1,6 @@
 # Model SQL Table References
 You can find the model that generates each graph in the models folder.
+You can find the data here: https://github.com/filecoin-project/filecoin-energy/releases/tag/data
 
 | Index | Model Name | File | Tables in FROM Clauses |
 |------:|------------|------|------------------------|
