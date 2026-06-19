@@ -91,3 +91,16 @@
   color: var(--theme-text-secondary);
   align-self: center;
 }
+
+.githubLink {
+  margin-left: 16px;
+  color: var(--theme-text-secondary);
+  align-self: center;
+  display: inline-flex;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.githubLink:hover {
+  opacity: 1;
+}
